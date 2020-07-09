@@ -3,6 +3,7 @@ package com.example.braintrainer;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.MediaRouteButton;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,8 +15,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.text.BreakIterator;
+
 public class LoginActivity extends AppCompatActivity {
-    private Button registro , Login;
+
+    public Button registro , Login;
     private EditText Usuario , Contraseña;
     private String NombreUsuario ="";
     private String ContraseñaUsuario="";
@@ -49,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-    private void loginUser() {
+    public void loginUser() {
         mAuth.signInWithEmailAndPassword(NombreUsuario, ContraseñaUsuario).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
