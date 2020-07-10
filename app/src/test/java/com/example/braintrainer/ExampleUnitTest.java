@@ -59,8 +59,30 @@ public class ExampleUnitTest {
     }
      @Test
     public void loginUser() {
-             LoginActivity mActivity;
-             TextView textView = (TextView) activity.findViewById(R.id.Mercadoña);
+        /** BOTON LOGIN **/
+         LoginActivity mActivity = new LoginActivity();
+         Intent expectedIntent = new Intent(activity, Principal.class);
+         Intent actual = new Intent(activity, Principal.class);
+         assertEquals(expectedIntent.getComponent(), actual.getComponent());
+     }
+
+    @Test
+    public void Registro() {
+        /** BOTON REGISTRAR **/
+        LoginActivity mActivity = new LoginActivity();
+        Intent expectedIntent = new Intent(activity, Principal.class);
+        Intent actual = new Intent(activity, Memo_Nivel_Intermedio.class);
+        assertEquals(expectedIntent.getComponent(), actual.getComponent());
+    }
+    @Test
+    public void InstanciadePrincipalaMemorama(){
+        Principal mPrincipal = new Principal();
+        Intent expectedIntent = new Intent(activity, NivelesMemorama.class);
+        Intent actual = new Intent(activity, NivelesMemorama.class);
+        assertEquals(expectedIntent.getComponent(), actual.getComponent());
+    }
+
+            /** TextView textView = (TextView) mActivity.findViewById(R.id.Mercadoña);
              int bottomMargin = ((LinearLayout.LayoutParams) textView.getLayoutParams()).bottomMargin;
              assertEquals(5, bottomMargin);
              int topMargin = ((LinearLayout.LayoutParams) textView.getLayoutParams()).topMargin;
@@ -76,10 +98,11 @@ public class ExampleUnitTest {
                 .resume()
                 .get();
     }
-
+**/
     @Test
     public void shouldHaveDefaultMargin() throws Exception {
-        TextView textView = (TextView) activity.findViewById(R.id.Mercadoña);
+        LoginActivity mActivity = new LoginActivity();
+        TextView textView = activity.findViewById(R.id.Mercadoña);
         int bottomMargin = ((LinearLayout.LayoutParams) textView.getLayoutParams()).bottomMargin;
         assertEquals(5, bottomMargin);
         int topMargin = ((LinearLayout.LayoutParams) textView.getLayoutParams()).topMargin;
@@ -90,12 +113,5 @@ public class ExampleUnitTest {
         assertEquals(10, leftMargin);
     }
 
-    @Test
-    public void clickingButton_shouldChangeMessage() {
-        LoginActivity activity = Robolectric.setupActivity(LoginActivity.class);
-        activity.findViewById(R.id.login).performClick();
-        Intent expectedIntent = new Intent(activity, NivelesMemorama.class);
-        Intent actual = shadowOf(RuntimeEnvironment.application).getNextStartedActivity();
-        assertEquals(expectedIntent.getComponent(), actual.getComponent());
-    }
+
 }
