@@ -1,10 +1,11 @@
 package com.example.braintrainer;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.MediaRouteButton;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-import java.text.BreakIterator;
+import static java.util.Objects.isNull;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -41,8 +42,10 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
         Login.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View v) {
+
                 NombreUsuario = Usuario.getText().toString();
                 ContraseñaUsuario = Contraseña.getText().toString();
                 if(!NombreUsuario.isEmpty() && !ContraseñaUsuario.isEmpty()){
@@ -66,15 +69,5 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-
-   @Override
-    protected void onStart() {
-        super.onStart();
-        if(mAuth.getCurrentUser() != null){
-            Intent i = new Intent(LoginActivity.this , Principal.class);
-            startActivity(i);
-            finish();
-        }
     }
 }
