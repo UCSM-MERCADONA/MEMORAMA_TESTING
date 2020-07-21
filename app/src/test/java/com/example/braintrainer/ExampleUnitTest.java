@@ -140,7 +140,7 @@ public class ExampleUnitTest {
 
 
     }
-   /** @Test
+    @Test
     public void boton_salir(){
         Registro mRegistro = new Registro();
         //Button button = mRegistro.findViewById(R.id.Registrate);
@@ -151,7 +151,7 @@ public class ExampleUnitTest {
         //assertEquals("button does not contain text 'Click Me!'", "Usuario Registrado", mRegistro.performClick_boton_registro());
 
 
-    }**/
+    }
     @Test
     public void Registro_instance() {
         /** BOTON REGISTRAR **/
