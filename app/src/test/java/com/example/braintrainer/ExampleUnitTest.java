@@ -67,13 +67,13 @@ public class ExampleUnitTest {
         Intent actual = new Intent(activity, MemoNivelDificil.class);
         assertEquals(expectedIntent.getComponent(), actual.getComponent());
     }
-   /** @Test
+   @Test
     public void instanceeasyamedio(){
         MemoNivelFacil MainActivity = new MemoNivelFacil();
         Intent actual = new Intent(MainActivity, Memo_Nivel_Intermedio.class);
         MainActivity.startActivity(actual);
         assertNotNull(actual);
-    }**/
+    }
 
             /** TextView textView = (TextView) mActivity.findViewById(R.id.Mercadoña);
              int bottomMargin = ((LinearLayout.LayoutParams) textView.getLayoutParams()).bottomMargin;
