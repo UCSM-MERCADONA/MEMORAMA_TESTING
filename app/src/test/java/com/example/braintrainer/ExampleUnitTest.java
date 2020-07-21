@@ -174,5 +174,13 @@ public class ExampleUnitTest {
         Intent actual = new Intent(mReg, Registro.class);
         assertEquals(expectedIntent.getComponent(), actual.getComponent());
     }
+    @Test
+    public void NivelesFiguraDiferentes() {
+
+        NivelesMemorama mReg = new NivelesMemorama();
+        Intent expectedIntent = new Intent(mReg, NivelesFiguraDiferente.class);
+        Intent actual = new Intent(mReg, NivelesFiguraDiferente.class);
+        assertEquals(expectedIntent.getComponent(), actual.getComponent());
+    }
 
 }
