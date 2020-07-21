@@ -117,6 +117,42 @@ public class ExampleUnitTest {
 
             }
     @Test
+    public void boton_login(){
+        LoginActivity mLog = new LoginActivity();
+        //Button button = mLog.findViewById(R.id.login);
+        //assertNotNull(button);
+        assertNotNull(mLog.performClick());
+        //assertNotNull("test button could not be found", button);
+        assertFalse(mLog.performClick());
+        //assertEquals("button does not contain text 'Click Me!'", "Usuario Registrado", mLog.performClick_boton_registro());
+
+
+    }
+    @Test
+    public void boton_aceptar(){
+        Registro mRegistro = new Registro();
+        //Button button = mRegistro.findViewById(R.id.Registrate);
+        //assertNotNull(button);
+        assertNotNull(mRegistro.performClick());
+        //assertNotNull("test button could not be found", button);
+        assertFalse(mRegistro.performClick());
+        //assertEquals("button does not contain text 'Click Me!'", "Usuario Registrado", mRegistro.performClick_boton_registro());
+
+
+    }
+   /** @Test
+    public void boton_salir(){
+        Registro mRegistro = new Registro();
+        //Button button = mRegistro.findViewById(R.id.Registrate);
+        //assertNotNull(button);
+        assertNotNull(mRegistro.performClick());
+        //assertNotNull("test button could not be found", button);
+        assertFalse(mRegistro.performClick());
+        //assertEquals("button does not contain text 'Click Me!'", "Usuario Registrado", mRegistro.performClick_boton_registro());
+
+
+    }**/
+    @Test
     public void Registro_instance() {
         /** BOTON REGISTRAR **/
         Registro mReg = new Registro();
