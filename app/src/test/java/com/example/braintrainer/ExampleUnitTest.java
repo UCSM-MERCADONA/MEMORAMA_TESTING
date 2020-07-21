@@ -166,4 +166,13 @@ public class ExampleUnitTest {
         assertEquals(expectedIntent.getComponent(), actual.getComponent());
     }
 
+    @Test
+    public void LoginaRegistro() {
+
+        LoginActivity mReg = new LoginActivity();
+        Intent expectedIntent = new Intent(mReg, Registro.class);
+        Intent actual = new Intent(mReg, Registro.class);
+        assertEquals(expectedIntent.getComponent(), actual.getComponent());
+    }
+
 }
