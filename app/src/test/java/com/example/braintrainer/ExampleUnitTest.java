@@ -60,6 +60,20 @@ public class ExampleUnitTest {
         MainActivity.startActivity(actual);
         assertNotNull(actual);
     }
+    @Test
+    public void instancemediodificil(){
+        Memo_Nivel_Intermedio mIntermedio = new Memo_Nivel_Intermedio();
+        Intent expectedIntent = new Intent(activity, MemoNivelDificil.class);
+        Intent actual = new Intent(activity, MemoNivelDificil.class);
+        assertEquals(expectedIntent.getComponent(), actual.getComponent());
+    }
+   /** @Test
+    public void instanceeasyamedio(){
+        MemoNivelFacil MainActivity = new MemoNivelFacil();
+        Intent actual = new Intent(MainActivity, Memo_Nivel_Intermedio.class);
+        MainActivity.startActivity(actual);
+        assertNotNull(actual);
+    }**/
 
             /** TextView textView = (TextView) mActivity.findViewById(R.id.Mercadoña);
              int bottomMargin = ((LinearLayout.LayoutParams) textView.getLayoutParams()).bottomMargin;
@@ -102,19 +116,6 @@ public class ExampleUnitTest {
 
 
             }
-            @Test
-
-            public void correo(){
-                try {
-                    //
-                    // Create InternetAddress object and validated the supplied
-                    // address which is this case is an email address.
-                    InternetAddress internetAddress = new InternetAddress(email);
-                    internetAddress.validate();
-                    isValid = true;
-                }
-}
-
     @Test
     public void Registro_instance() {
         /** BOTON REGISTRAR **/
