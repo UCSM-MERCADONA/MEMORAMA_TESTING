@@ -157,5 +157,13 @@ public class ExampleUnitTest {
         Intent actual = new Intent(mReg, Memo_Nivel_Intermedio.class);
         assertEquals(expectedIntent.getComponent(), actual.getComponent());
     }
+    @Test
+    public void PrincipalaRegistro() {
+
+        Principal mPrincipal = new Principal();
+        Intent expectedIntent = new Intent(mPrincipal, Registro.class);
+        Intent actual = new Intent(mPrincipal, Registro.class);
+        assertEquals(expectedIntent.getComponent(), actual.getComponent());
+    }
 
 }
