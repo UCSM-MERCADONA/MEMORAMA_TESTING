@@ -1,8 +1,6 @@
 package com.example.braintrainer;
 
 import org.junit.Test;
-
-import static java.util.Objects.isNull;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertTrue;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -150,7 +148,6 @@ public class ExampleUnitTest {
         assertFalse(mRegistro.performClick());
         //assertEquals("button does not contain text 'Click Me!'", "Usuario Registrado", mRegistro.performClick_boton_registro());
 
-
     }
     @Test
     public void Registro_instance() {
@@ -160,4 +157,5 @@ public class ExampleUnitTest {
         Intent actual = new Intent(mReg, Memo_Nivel_Intermedio.class);
         assertEquals(expectedIntent.getComponent(), actual.getComponent());
     }
+
 }
