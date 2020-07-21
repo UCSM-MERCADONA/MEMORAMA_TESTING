@@ -102,7 +102,18 @@ public class ExampleUnitTest {
 
 
             }
+            @Test
 
+            public void correo(){
+                try {
+                    //
+                    // Create InternetAddress object and validated the supplied
+                    // address which is this case is an email address.
+                    InternetAddress internetAddress = new InternetAddress(email);
+                    internetAddress.validate();
+                    isValid = true;
+                }
+}
 
     @Test
     public void Registro_instance() {
